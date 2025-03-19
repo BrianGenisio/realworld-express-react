@@ -1,0 +1,10 @@
+{
+    "name": "realworld-express-react",
+    "version": "1.0.0",
+    "scripts": {
+        "start": "concurrently --names 'Express,React' -c 'green,blue' 'JWT_SECRET=abc123 npm --prefix=backend run dev' 'npm --prefix=frontend run dev'"
+    },
+    "dependencies": {
+        "concurrently": "^9.1.2"
+    }
+}

@@ -1,0 +1,10 @@
+button:focus {
+  outline: none;
+}
+
+@media screen and (max-width: 600px) {
+  .page.container .row {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
