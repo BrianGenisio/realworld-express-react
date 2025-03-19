@@ -11,10 +11,7 @@ const app = express();
 
 // Body parser
 app.use(express.json());
-
-if (process.env.NODE_ENV === "development") {
-  app.use(morgan("dev"));
-}
+app.use(morgan("dev"));
 
 // CORS
 app.use((req, res, next) => {
@@ -51,6 +48,6 @@ app.use(errorHandler);
 const server = app.listen(
   PORT,
   console.log(
-    `Server running in ${process.env.NODE_ENV} mode on port ${PORT}`.yellow.bold
+    `Server running on port ${PORT}`.yellow.bold
   )
 );
